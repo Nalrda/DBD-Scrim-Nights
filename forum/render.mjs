@@ -1,7 +1,7 @@
 // Pure renderer: does not depend on Discord and can be tested without credentials.
 export const AUTO_MARKER='[DBD-BALANCE-AUTO]';
 const MAX=1850;
-const md=s=>String(s).replace(/([*_`~|>])/g,'\\$1').replace(/@/g,'@\\u200b');
+const md=s=>String(s).replace(/([*_`~|>])/g,'\\$1').replace(/@/g,'@​');
 const formatId=(v,lookup,unresolved,label)=> {
  const raw=String(v),name=lookup?.[raw];
  if(!name){unresolved.add(`${label}: ${raw}`);return `ID ${md(raw)} (unmapped)`;}
